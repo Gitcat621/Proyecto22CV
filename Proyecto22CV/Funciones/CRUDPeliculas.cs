@@ -16,8 +16,7 @@ namespace Proyecto22CV.Funciones
             using (var _context = new ApplicationDbContext())
             {
                 Peliculas peliculas = new Peliculas()
-                {
-                    
+                {                   
                     Nombre = Console.ReadLine(),
                     Año = int.Parse(Console.ReadLine()),
                     Clasificacion = int.Parse(Console.ReadLine()),
@@ -26,17 +25,16 @@ namespace Proyecto22CV.Funciones
                     Genero = Console.ReadLine(),
                     Idioma = Console.ReadLine(),
                     Duracion = Console.ReadLine()
-
                 };
 
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Nombre);
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Año);
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Clasificacion);
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Director);
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Nacionalidad);
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Genero);
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Idioma);
-                Console.WriteLine("Nombre de la pelicula" + peliculas.Duracion);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Nombre);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Año);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Clasificacion);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Director);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Nacionalidad);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Genero);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Idioma);
+                //Console.WriteLine("Nombre de la pelicula" + peliculas.Duracion);
 
 
                 _context.Peliculas.Add(peliculas);
@@ -62,10 +60,8 @@ namespace Proyecto22CV.Funciones
                 peliculas.Idioma = Console.ReadLine();
                 peliculas.Duracion = Console.ReadLine();
 
-
                 _context.Peliculas.Update(peliculas);
                 _context.SaveChanges();
-
             }
         }
 
@@ -83,13 +79,13 @@ namespace Proyecto22CV.Funciones
 
                     Console.WriteLine("---------------------------------");
                     Console.WriteLine($">> Id: {item.Id}");
-                    Console.WriteLine($">> NumCurso: {item.Nombre}");
-                    Console.WriteLine($">> Materia: {item.Año}");
-                    Console.WriteLine($">> Duracion: {item.Clasificacion}");
-                    Console.WriteLine($">> Duracion: {item.Director}");
-                    Console.WriteLine($">> Duracion: {item.Nacionalidad}");
-                    Console.WriteLine($">> Duracion: {item.Genero}");
-                    Console.WriteLine($">> Duracion: {item.Idioma}");
+                    Console.WriteLine($">> Nombre: {item.Nombre}");
+                    Console.WriteLine($">> Año: {item.Año}");
+                    Console.WriteLine($">> Clasificacion: {item.Clasificacion}");
+                    Console.WriteLine($">> Director: {item.Director}");
+                    Console.WriteLine($">> Nacionalidad: {item.Nacionalidad}");
+                    Console.WriteLine($">> Genero: {item.Genero}");
+                    Console.WriteLine($">> Idioma: {item.Idioma}");
                     Console.WriteLine($">> Duracion: {item.Duracion}");
                     Console.WriteLine("_________________________________");
 
