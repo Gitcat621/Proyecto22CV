@@ -9,8 +9,8 @@ using Proyecto22CV.Context;
 namespace Proyecto22CV.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230327222638_example")]
-    partial class example
+    [Migration("20230328033913_Vid")]
+    partial class Vid
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -117,6 +117,48 @@ namespace Proyecto22CV.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Peliculas");
+                });
+
+            modelBuilder.Entity("Proyecto22CV.Clases.Series", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("Capitulos")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreCap")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Temporadas")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Series");
+                });
+
+            modelBuilder.Entity("Proyecto22CV.Clases.Usuarios", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("User")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }
