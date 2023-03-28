@@ -51,13 +51,21 @@ namespace Proyecto22CV.Funciones
             {
                 Peliculas peliculas = _context.Peliculas.Find(id);
 
+                Console.WriteLine("Actualiza el nombre del pelicula");
                 peliculas.Nombre = Console.ReadLine();
+                Console.WriteLine("Actualiza el año de la pelicula");
                 peliculas.Año = int.Parse(Console.ReadLine());
+                Console.WriteLine("Actualice la clasificacion de la pelicula");
                 peliculas.Clasificacion = int.Parse(Console.ReadLine());
+                Console.WriteLine("Actualice el nombre del director de la pelicula");
                 peliculas.Director = Console.ReadLine();
+                Console.WriteLine("Actualice la nacionalidad de la pelicula");
                 peliculas.Nacionalidad = Console.ReadLine();
+                Console.WriteLine("Actualice el genero de la pelicula");
                 peliculas.Genero = Console.ReadLine();
+                Console.WriteLine("Actualice el idioma de la pelicula");
                 peliculas.Idioma = Console.ReadLine();
+                Console.WriteLine("Actualice la duracion de la pelicula");
                 peliculas.Duracion = Console.ReadLine();
 
                 _context.Peliculas.Update(peliculas);
