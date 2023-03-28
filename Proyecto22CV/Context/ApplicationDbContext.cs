@@ -13,7 +13,7 @@ namespace Proyecto22CV.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer(@"Server=//Servidor//;Database=//NombreProyecto//;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=LAPTOP-TUAC5KFP;Database=Proyecto;Trusted_Connection=True;");
         }
 
         public DbSet<Actores> Actores { get; set; }

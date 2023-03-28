@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC 600\\Desktop\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj": {}
+    "C:\\Users\\Forma\\source\\repos\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC 600\\Desktop\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj": {
+    "C:\\Users\\Forma\\source\\repos\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC 600\\Desktop\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj",
+        "projectUniqueName": "C:\\Users\\Forma\\source\\repos\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj",
         "projectName": "Proyecto22CV",
-        "projectPath": "C:\\Users\\PC 600\\Desktop\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj",
-        "packagesPath": "C:\\Users\\PC 600\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC 600\\Desktop\\Proyecto22CV\\Proyecto22CV\\obj\\",
+        "projectPath": "C:\\Users\\Forma\\source\\repos\\Proyecto22CV\\Proyecto22CV\\Proyecto22CV.csproj",
+        "packagesPath": "C:\\Users\\Forma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Forma\\source\\repos\\Proyecto22CV\\Proyecto22CV\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\PC 600\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Forma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

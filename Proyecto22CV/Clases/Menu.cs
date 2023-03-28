@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto22CV.Funciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto22CV.Clases
 {
-    public class Menu
+    public class Menu 
     {
         public void Opciones()
         {
@@ -66,9 +67,13 @@ namespace Proyecto22CV.Clases
                 case 1:
                     //instancie crud pelicula
                     Console.Clear();
+                    CRUDPeliculas pelicula1 = new CRUDPeliculas();                    
+                    pelicula1.Leer();
                     goto ERROR;
                 case 2:
                     Console.Clear();
+                    CRUDPeliculas pelicula2 = new CRUDPeliculas();
+                    pelicula2.Crear();
                     goto ERROR;
                 case 3:
                     Console.Clear();
