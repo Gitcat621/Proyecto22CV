@@ -2,7 +2,7 @@
 
 namespace Proyecto22CV.Migrations
 {
-    public partial class example : Migration
+    public partial class Vid : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -62,6 +62,36 @@ namespace Proyecto22CV.Migrations
                 {
                     table.PrimaryKey("PK_Peliculas", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Series",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Temporadas = table.Column<int>(type: "int", nullable: false),
+                    Capitulos = table.Column<int>(type: "int", nullable: false),
+                    NombreCap = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Series", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Usuarios",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    User = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -74,6 +104,12 @@ namespace Proyecto22CV.Migrations
 
             migrationBuilder.DropTable(
                 name: "Peliculas");
+
+            migrationBuilder.DropTable(
+                name: "Series");
+
+            migrationBuilder.DropTable(
+                name: "Usuarios");
         }
     }
 }

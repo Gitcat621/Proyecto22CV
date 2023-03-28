@@ -88,8 +88,6 @@ namespace Proyecto22CV.Funciones
                     Console.WriteLine($">> Idioma: {item.Idioma}");
                     Console.WriteLine($">> Duracion: {item.Duracion}");
                     Console.WriteLine("_________________________________");
-
-
                 }
             }
         }
