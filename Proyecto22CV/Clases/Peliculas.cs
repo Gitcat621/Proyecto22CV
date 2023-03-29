@@ -13,7 +13,7 @@ namespace Proyecto22CV.Clases
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int Año { get; set; }
-        public int Clasificacion { get; set; }
+        public string Clasificacion { get; set; }
         public string Director { get; set; }
         public string Nacionalidad { get; set; }
         public string Genero { get; set; }

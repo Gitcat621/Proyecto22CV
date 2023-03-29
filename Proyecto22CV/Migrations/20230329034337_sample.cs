@@ -2,7 +2,7 @@
 
 namespace Proyecto22CV.Migrations
 {
-    public partial class Vid : Migration
+    public partial class sample : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,7 +51,7 @@ namespace Proyecto22CV.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Año = table.Column<int>(type: "int", nullable: false),
-                    Clasificacion = table.Column<int>(type: "int", nullable: false),
+                    Clasificacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Director = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nacionalidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Genero = table.Column<string>(type: "nvarchar(max)", nullable: true),

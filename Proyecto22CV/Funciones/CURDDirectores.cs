@@ -12,17 +12,22 @@ namespace Proyecto22CV.Funciones
     {
         public void Crear()
         {
-
+            Console.Clear();
             using (var _context = new ApplicationDbContext())
             {
-                    Directores director = new Directores();
+                Directores director = new Directores();
                 {
-
+                    Console.WriteLine("Ingresa el nombre del director:");
                     director.Nombre = Console.ReadLine();
+                    Console.WriteLine("Ingresa la nacionalidad del director:");
                     director.Nacionalidad = Console.ReadLine();
+                    Console.WriteLine("Ingresa la pelicula famosa del director:");
                     director.PeliculaFamosa = Console.ReadLine();
+                    Console.WriteLine("Ingresa el dia de nacimiento del director:");
                     director.DiaNacimiento = Console.ReadLine();
+                    Console.WriteLine("Ingresa el mes de nacimiento del director:");
                     director.MesNacimiento = Console.ReadLine();
+                    Console.WriteLine("Ingresa el nombre del director:");
                     director.AñoNacimiento = Console.ReadLine();
 
                 };
@@ -38,15 +43,21 @@ namespace Proyecto22CV.Funciones
 
             using (ApplicationDbContext _context = new ApplicationDbContext())
             {
+                Console.Clear();
                 Directores director = _context.Directores.Find(id);
 
+                Console.WriteLine("Actualice el nuevo nombre del director:");
                 director.Nombre = Console.ReadLine();
+                Console.WriteLine("Actualice la nueva nacionalidad del director:");
                 director.Nacionalidad = Console.ReadLine();
+                Console.WriteLine("Actualice la nueva pelicula famosa del director:");
                 director.PeliculaFamosa = Console.ReadLine();
+                Console.WriteLine("Actualice el dia de nacimiento del director:");
                 director.DiaNacimiento = Console.ReadLine();
+                Console.WriteLine("Actualice el mes de nacimiento del director:");
                 director.MesNacimiento = Console.ReadLine();
+                Console.WriteLine("Actualice el año de nacimiento del director:");
                 director.AñoNacimiento = Console.ReadLine();
-
 
                 _context.Directores.Update(director);
                 _context.SaveChanges();

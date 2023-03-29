@@ -18,7 +18,8 @@ namespace Proyecto22CV.Clases
                 Console.WriteLine("1. Peliculas");
                 Console.WriteLine("2. Actores");
                 Console.WriteLine("3. Directores");
-                Console.WriteLine("4. Salir");
+                Console.WriteLine("4. Series");
+                Console.WriteLine("5. Salir");
                 int opc = int.Parse(Console.ReadLine());
                 switch (opc)
                 {
@@ -35,6 +36,10 @@ namespace Proyecto22CV.Clases
                         opcionesDirector();
                         goto ERROR1;
                     case 4:
+                        Console.Clear();
+                        Console.WriteLine("SERIES");
+                        break;
+                    case 5:
                         Console.WriteLine("ADIOS");
                         Environment.Exit(0);
                         break;
@@ -77,9 +82,14 @@ namespace Proyecto22CV.Clases
                     goto ERROR;
                 case 3:
                     Console.Clear();
+                    CRUDPeliculas pelicula3 = new CRUDPeliculas();
+                    pelicula3.Editar();
                     goto ERROR;
                 case 4:
                     Console.Clear();
+                    CRUDPeliculas pelicula4 = new CRUDPeliculas();
+                    pelicula4.Eliminar();
+                    //pelicula3.Editar();
                     goto ERROR;
                 default:
                     Console.WriteLine("Escoja una opcion valida");

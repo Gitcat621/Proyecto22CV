@@ -9,8 +9,8 @@ using Proyecto22CV.Context;
 namespace Proyecto22CV.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230328033913_Vid")]
-    partial class Vid
+    [Migration("20230329034337_sample")]
+    partial class sample
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -93,8 +93,8 @@ namespace Proyecto22CV.Migrations
                     b.Property<int>("Año")
                         .HasColumnType("int");
 
-                    b.Property<int>("Clasificacion")
-                        .HasColumnType("int");
+                    b.Property<string>("Clasificacion")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Director")
                         .HasColumnType("nvarchar(max)");

@@ -62,8 +62,6 @@ namespace Proyecto22CV.Funciones
                 Console.WriteLine("Actualice el año de nacimiento del Actor");
                 actores.Año = Console.ReadLine();
 
-
-
                 _context.Actores.Update(actores);
                 _context.SaveChanges();
             }
@@ -95,6 +93,24 @@ namespace Proyecto22CV.Funciones
 
                 }
             }
+        }
+
+
+        public void Eliminar()
+        {
+            using (ApplicationDbContext _context = new ApplicationDbContext())
+            {
+                Console.Clear();
+                Console.WriteLine("Ingresa el numero o ID de actor:");
+                int id = int.Parse(Console.ReadLine());
+
+                var actores = _context.Actores.Find(id);
+
+                _context.Actores.Remove(actores);
+                _context.SaveChanges();
+
+            }
+
         }
     }
 }

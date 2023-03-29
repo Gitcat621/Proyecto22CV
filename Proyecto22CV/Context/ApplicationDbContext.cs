@@ -13,7 +13,7 @@ namespace Proyecto22CV.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-6GNHQHD;Database=Videoteca;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=LAPTOP-ICM7MDSP;Database=Videoteca;Trusted_Connection=True;");
         }
 
         public DbSet<Actores> Actores { get; set; }

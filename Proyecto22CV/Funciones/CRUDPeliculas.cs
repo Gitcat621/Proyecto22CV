@@ -15,17 +15,25 @@ namespace Proyecto22CV.Funciones
 
             using (var _context = new ApplicationDbContext())
             {
-                Peliculas peliculas = new Peliculas()
-                {                   
-                    Nombre = Console.ReadLine(),
-                    Año = int.Parse(Console.ReadLine()),
-                    Clasificacion = int.Parse(Console.ReadLine()),
-                    Director = Console.ReadLine(),
-                    Nacionalidad = Console.ReadLine(),
-                    Genero = Console.ReadLine(),
-                    Idioma = Console.ReadLine(),
-                    Duracion = Console.ReadLine()
-                };
+                Peliculas peliculas = new Peliculas();
+       
+                Console.WriteLine("Ingresa el nombre de la pelicula:");
+                peliculas.Nombre = Console.ReadLine();
+                Console.WriteLine("Ingresa el año de la pelicula:");
+                peliculas.Año = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingresa la clasificacion de la pelicula:");
+                peliculas.Clasificacion = Console.ReadLine();
+                Console.WriteLine("Ingresa el director de la pelicula:");
+                peliculas.Director = Console.ReadLine();
+                Console.WriteLine("Ingresa la nacionalidad de la pelicula:");
+                peliculas.Nacionalidad = Console.ReadLine();
+                Console.WriteLine("Ingresa el genero de la pelicula:");
+                peliculas.Genero = Console.ReadLine();
+                Console.WriteLine("Ingresa el idioma de la pelicula");
+                peliculas.Idioma = Console.ReadLine();
+                Console.WriteLine("Ingresa la duracion de la pelicula");
+                peliculas.Duracion = Console.ReadLine();
+
 
                 //Console.WriteLine("Nombre de la pelicula" + peliculas.Nombre);
                 //Console.WriteLine("Nombre de la pelicula" + peliculas.Año);
@@ -44,11 +52,15 @@ namespace Proyecto22CV.Funciones
 
         }
 
-        public void Editar(int id)
+        public void Editar()
         {
 
             using (ApplicationDbContext _context = new ApplicationDbContext())
             {
+                Console.Clear();
+                Console.WriteLine("Ingresa el numero o ID de pelicula:");
+                int id = int.Parse(Console.ReadLine());
+
                 Peliculas peliculas = _context.Peliculas.Find(id);
 
                 Console.WriteLine("Actualiza el nombre del pelicula");
@@ -56,7 +68,7 @@ namespace Proyecto22CV.Funciones
                 Console.WriteLine("Actualiza el año de la pelicula");
                 peliculas.Año = int.Parse(Console.ReadLine());
                 Console.WriteLine("Actualice la clasificacion de la pelicula");
-                peliculas.Clasificacion = int.Parse(Console.ReadLine());
+                peliculas.Clasificacion = Console.ReadLine();
                 Console.WriteLine("Actualice el nombre del director de la pelicula");
                 peliculas.Director = Console.ReadLine();
                 Console.WriteLine("Actualice la nacionalidad de la pelicula");
@@ -98,6 +110,24 @@ namespace Proyecto22CV.Funciones
                     Console.WriteLine("_________________________________");
                 }
             }
+        }
+
+
+        public void Eliminar()
+        {
+            using (ApplicationDbContext _context = new ApplicationDbContext())
+            {
+                Console.Clear();
+                Console.WriteLine("Ingresa el numero o ID de pelicula:");
+                int id = int.Parse(Console.ReadLine());
+
+                var peliculas = _context.Peliculas.Find(id);
+
+                _context.Peliculas.Remove(peliculas);
+                _context.SaveChanges();
+
+            }
+
         }
     }
 }

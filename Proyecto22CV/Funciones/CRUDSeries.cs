@@ -17,13 +17,13 @@ namespace Proyecto22CV.Funciones
             {
                 Series series = new Series();
                 {
-                    Console.WriteLine("Ingrese el nombre de la serie");
+                    Console.WriteLine("Ingrese el nombre de la serie:");
                     series.Nombre = Console.ReadLine();
-                    Console.WriteLine("Ingrese la cantidad de temporadas");
+                    Console.WriteLine("Ingrese la cantidad de temporadas:");
                     series.Temporadas = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Ingrese la cantidad de capitulos");
+                    Console.WriteLine("Ingrese la cantidad de capitulos:");
                     series.Capitulos = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Ingrese el nombre del capitulo");
+                    Console.WriteLine("Ingrese el nombre del capitulo:");
                     series.NombreCap = Console.ReadLine();
                   
                 };
@@ -34,11 +34,15 @@ namespace Proyecto22CV.Funciones
             }
         }
 
-        public void Editar(int id)
+        public void Editar()
         {
-
             using (ApplicationDbContext _context = new ApplicationDbContext())
             {
+
+                Console.Clear();
+                Console.WriteLine("Ingresa el numero o ID de la serie:");
+                int id = int.Parse(Console.ReadLine());
+
                 Series series = _context.Series.Find(id);
 
                 Console.WriteLine("Ingrese el nuevo nombre de la serie");
@@ -65,21 +69,39 @@ namespace Proyecto22CV.Funciones
 
                 var series = _context.Series.ToList();
 
-                Console.WriteLine("--Lista de Usuarios--");
+                Console.WriteLine("--Lista de Series--");
                 foreach (var item in series)
                 {
 
                     Console.WriteLine("---------------------------------");
                     Console.WriteLine($">> Id: {item.Id}");
                     Console.WriteLine($">> Nombre: {item.Nombre}");
-                    Console.WriteLine($">> Nacionalidad: {item.Temporadas}");
-                    Console.WriteLine($">> PersonajeFamoso: {item.Capitulos}");
-                    Console.WriteLine($">> PeliculaFamosa: {item.NombreCap}");
+                    Console.WriteLine($">> Temporadas: {item.Temporadas}");
+                    Console.WriteLine($">> Capitulos: {item.Capitulos}");
+                    Console.WriteLine($">> NombreCap: {item.NombreCap}");
                     Console.WriteLine("_________________________________");
 
 
                 }
             }
+        }
+
+
+        public void Eliminar()
+        {
+            using (ApplicationDbContext _context = new ApplicationDbContext())
+            {
+                Console.Clear();
+                Console.WriteLine("Ingresa el numero o ID de pelicula:");
+                int id = int.Parse(Console.ReadLine());
+
+                var series = _context.Series.Find(id);
+
+                _context.Series.Remove(series);
+                _context.SaveChanges();
+
+            }
+
         }
     }
 }

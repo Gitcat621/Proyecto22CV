@@ -91,8 +91,8 @@ namespace Proyecto22CV.Migrations
                     b.Property<int>("Año")
                         .HasColumnType("int");
 
-                    b.Property<int>("Clasificacion")
-                        .HasColumnType("int");
+                    b.Property<string>("Clasificacion")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Director")
                         .HasColumnType("nvarchar(max)");

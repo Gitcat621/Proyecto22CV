@@ -15,15 +15,40 @@ namespace Proyecto22CV.Funciones
 
             using (var _context = new ApplicationDbContext())
             {
-                Usuarios usuarios = new Usuarios()
-                {
-                    User = Console.ReadLine(),
-                    Password = Console.ReadLine(),
-
-                };
+                Usuarios usuarios = new Usuarios();
+                Console.WriteLine(" ~ R E G I S T R O   D E   U S U A R I O ~ ");
+                Console.WriteLine("Ingresa tu username:");
+                usuarios.User = Console.ReadLine();
+                Console.WriteLine("Ingresa tu password:");
+                usuarios.Password = Console.ReadLine();
                 _context.Usuarios.Add(usuarios);
                 _context.SaveChanges();
 
+            }
+        }
+
+        public void Login()
+        {
+            Console.Clear();
+            Console.WriteLine("Ingresa tu username:");
+            string user = Console.ReadLine();
+
+            Console.WriteLine("Ingresa tu password:");
+            string password = Console.ReadLine();
+
+            using (var _context = new ApplicationDbContext())
+            {
+                Usuarios usuario = _context.Usuarios.Where(x => x.Password == password && x.User == user).FirstOrDefault();
+
+                if (usuario != null)
+                {
+                    Console.Clear();
+                    Menu menu = new Menu();
+                }
+                else
+                {
+                    Console.WriteLine("USUARIO O PASSWORD INCORRECTO :(");
+                }
             }
         }
 
